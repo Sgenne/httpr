@@ -1,3 +1,5 @@
+use crate::cli_context::CLIContext;
+
 const USAGE: &'static str = "
     Minimal HTTP client for exploring HTTP, HTTPS (and TLS)
 
@@ -18,3 +20,7 @@ const USAGE: &'static str = "
 pub fn print_usage() {
     println!("{USAGE}");    
 }
+
+pub fn parse_args(args: Vec<String>) -> CLIContext {
+    todo!()
+} 

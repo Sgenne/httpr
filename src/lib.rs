@@ -1,6 +1,8 @@
 use crate::cli_error::CLIError;
 
 pub mod cli_error;
+mod cli_context;
+mod request_method;
 mod io;
 
 pub fn run(args: Vec<String>) -> Result<(), CLIError> {
@@ -9,6 +11,7 @@ pub fn run(args: Vec<String>) -> Result<(), CLIError> {
         return Ok(());   
     }
 
-    println!("Commands!");
+    let cli_context = io::parse_args(args);
+
     Ok(())
 }
